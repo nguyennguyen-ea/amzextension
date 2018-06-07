@@ -1,18 +1,26 @@
 {
   "manifest_version": 2,
-  "name" : "amz extension",
+  "name": "amz extension",
   "version": "1.0",
   "description": "An Amz Extension",
   "icons": {
-    "128":"icons/cash128.png",
-    "48":"icons/cash48.png",
-    "16":"icons/cash16.png"
+    "128": "icons/cash128.png",
+    "48": "icons/cash48.png",
+    "16": "icons/cash16.png"
   },
-  "browser_action":{
-    "default_icon":"icons/cash16.png",
-    "default_popup":"popup.html"
+  "browser_action": {
+    "default_icon": "icons/cash16.png",
+    "default_popup": "popup.html"
   },
-  "permissions":[
-    "storage"
-  ]
+  "permissions": [
+    "storage",
+    "https://www.amazon.com/"
+  ],
+  "content_scripts": [{
+    "matches": [
+      "https://www.amazon.com/*"
+    ],
+    "css": ["css/styles.css"],
+    "js": ["lib/jquery-3.3.1.min.js","content_scripts.js"]
+  }]
 }

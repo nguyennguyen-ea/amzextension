@@ -1,3 +1,35 @@
-h2{
+h2 {
   color: black;
 }
+
+.button {
+  width: 30%;
+  height: auto;
+  border: 1px solid #a6a6a6;
+  border-top-color: #949494;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .5), 0 1px 0 rgba(0, 0, 0, .07) inset;
+  outline: 0;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#gift-card-container{
+  width:100%;
+  text-align:center;
+}
+
+#gift-card-left{
+  float:left;
+}
+
+#gift-card-center{
+  display: inline-block;
+}
+
+#gift-card-right{
+  float:right;
+}
+
+
+ display: inline-block;
